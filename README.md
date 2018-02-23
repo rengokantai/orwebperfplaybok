@@ -22,11 +22,8 @@ svg masking
 </svg>
 ```
 
-automated optimizers
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+automated optimizers  
+
 format | plugin
  --- | --- 
 svg | imagemin-svgo
