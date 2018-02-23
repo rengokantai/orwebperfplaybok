@@ -118,3 +118,18 @@ transform: translateZ(0)
 summary
 - DONOT animate layout properties
 - Animate using transform and opacity
+
+
+
+### Critical Loading
+render blocking resources:
+- link rel
+- script src
+- fonts
+
+type of css
+- critical: inline
+- less:
+```
+<link rel="preload" as="style" type="text/css" href="" onliad="this.rel='stylesheet'">
+```
