@@ -73,3 +73,39 @@ use fontfaceobserver:
 ```
 
 ### Animation Performance
+pixel pipeline
+- layout
+- paint
+- composite
+
+layout
+- takes longer the more elements on the page
+- take care to not thrash
+- avoid if possible
+
+layout properties
+- width height
+- align-items justify-content
+- font-size line-height
+- margins padding
+- top l r b
+
+paint
+- Rasterization
+- faster than layout
+- takes longer the more pixels there are to paint
+
+paint properties
+- background
+- color
+- box-shadow
+- fixed position
+
+composite
+- Arrange pages into tiles and layers
+- Uploads tiles and layers to the GPU
+- Very fast,efficient
+
+composite properties
+- opacity
+- transform
