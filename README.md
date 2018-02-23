@@ -30,3 +30,15 @@ svg | imagemin-svgo
 gif | imagemin-giflossy
 jpg | imagemin-jpgoptim
 png | imagemin-pngquant
+
+### Font Loading
+reason
+- Render blocking resource
+- Content invisible while loading
+- flash of invisible text(foit)
+
+try critical foft
+- async loads the full font family
+
+reduce font size
+- fontsqui.  create subset
