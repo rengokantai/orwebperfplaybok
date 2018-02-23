@@ -42,3 +42,27 @@ try critical foft
 
 reduce font size
 - fontsqui.  create subset
+
+[unicode generator](https://codepen.io/elifitch/pen/Ljqway)
+in css
+```
+<link rel="preload" as="style" href="style.css"/>
+<link rel="preload" as="font" type="font/woff2" href="fonts/brandon"/>
+@font-face{
+  unicode-range: U+30-39,U+41-5A,U+61-7A
+}
+.font-stage-2{
+  font-family:'brandon subset';
+}
+```
+use fontfaceobserver:
+```
+//fontfaceobserver
+(function(){
+  const font = new FontFaceObserver('brandon');
+  Promise.all([font.load()]).load(()=>{
+    document.documentElement.className+=' fonts-stage-2';
+    return;
+  })
+})()
+```
