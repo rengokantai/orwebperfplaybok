@@ -59,10 +59,17 @@ use fontfaceobserver:
 ```
 //fontfaceobserver
 (function(){
+  if(sessionStorage.criticalFontLoaded){
+    document.documentElement.className+=' fonts-stage-2';
+    return;
+  }
   const font = new FontFaceObserver('brandon');
   Promise.all([font.load()]).load(()=>{
+    sessionStorage.criticalFontLoaded=true;
     document.documentElement.className+=' fonts-stage-2';
     return;
   })
 })()
 ```
+
+### Animation Performance
