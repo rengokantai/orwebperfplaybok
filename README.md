@@ -21,3 +21,11 @@ svg masking
 <image mask="url(#canMask)" id="canTop" width="500" height="1000" xlink:href="cantop.jpg"></image>
 </svg>
 ```
+
+automated optimizers
+format|plugin
+---|---
+svg|imagemin-svgo
+gif|imagemin-giflossy
+jpg|imagemin-jpgoptim
+png|imagemin-pngquant
