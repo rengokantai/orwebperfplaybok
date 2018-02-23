@@ -23,6 +23,10 @@ svg masking
 ```
 
 automated optimizers
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
 format | plugin
  --- | --- 
 svg | imagemin-svgo
