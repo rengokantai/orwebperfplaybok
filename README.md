@@ -23,9 +23,9 @@ svg masking
 ```
 
 automated optimizers
-format|plugin
+format | plugin
  --- | --- 
-svg|imagemin-svgo
-gif|imagemin-giflossy
-jpg|imagemin-jpgoptim
-png|imagemin-pngquant
+svg | imagemin-svgo
+gif | imagemin-giflossy
+jpg | imagemin-jpgoptim
+png | imagemin-pngquant
