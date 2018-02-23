@@ -109,3 +109,12 @@ composite
 composite properties
 - opacity
 - transform
+###### 13:00
+avoid repaint for fixed
+```
+will-change: transform
+transform: translateZ(0)
+```
+summary
+- DONOT animate layout properties
+- Animate using transform and opacity
