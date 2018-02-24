@@ -191,3 +191,7 @@ function lazyLoadManager(entries){
 createLazyLoadObserver();
 
 ```
+
+
+### Loading Indicators
+skeleton screen
