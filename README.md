@@ -138,3 +138,56 @@ current using filament loadcss as polyfill.
 tools:
 - webpack-plugin-critical
 - gulp critical
+
+
+### Script Loading
+async:
+- js execution will block html parsing  
+
+defer
+- js execution will not block html parsing  
+
+when to use:
+async: many small scripts dont rely on each other
+defer: small rely on big js file
+
+### Code Minification
+gzipping
+- Replaces repeated characters with pointers to first instance
+- Browsers can read files compressed with zip
+
+### Lazy Loading
+image loader, version 1 naive.
+```
+const targets = document.querySelectorAll('img[data-src]');
+function lazyLoadImg(el){
+  el.src=el.getAttribute('data-src');
+}
+targets.forEach(el=>{lazyLoadImg(el);})
+```
+image loader, version 2 IntersectionObserver
+```
+const targets = document.querySelectorAll(img[data-src]');
+function createLazyLoadObserver(){
+  const observer = new IntersectionObserver(function(){
+    console.log()
+  })
+  targets.forEach(el=>{
+    observer.observe(el);
+  });
+}
+
+function lazyLoadImg(el){
+   el.src=el.getAttribute('data-src');
+}
+
+function lazyLoadManager(entries){
+  entries.forEach(entry=>{
+    if(entry.intersectionRatio>0){
+      lazyLoading(entry.target);
+    }
+  })
+}
+createLazyLoadObserver();
+
+```
