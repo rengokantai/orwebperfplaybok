@@ -142,6 +142,7 @@ type of css
 ```
 <link rel="preload" as="style" type="text/css" href="" onliad="this.rel='stylesheet'">
 ```
+(this wont block rendering)
 current using filament loadcss as polyfill.  
 
 tools:
@@ -157,8 +158,8 @@ defer
 - js execution will not block html parsing  
 
 when to use:
-async: many small scripts dont rely on each other
-defer: small rely on big js file
+async: many small scripts dont rely on each other(download in parallel)
+defer: small rely on big js file(download in series)
 
 ### Code Minification
 gzipping
