@@ -73,33 +73,40 @@ use fontfaceobserver:
 ```
 
 ### Animation Performance
-pixel pipeline
+###### 02:30 pixel pipeline
 - layout
-- paint
-- composite
+- paint: resterize and painting element
+- composite: tuen image data to textures pass GPU to display
 
-layout
+###### 03:40
+layout (reflow)
+- spatial relationships
 - takes longer the more elements on the page
 - take care to not thrash
 - avoid if possible
+
+
 
 layout properties
 - width height
 - align-items justify-content
 - font-size line-height
 - margins padding
-- top l r b
+- top left right bottom
 
 paint
 - Rasterization
-- faster than layout
-- takes longer the more pixels there are to paint
+- Generally faster than layout
+- Takes longer the more pixels there are to paint
 
 paint properties
 - background
 - color
 - box-shadow
 - fixed position
+
+###### test.
+in Chrome, Rendering-> Paint Flashing
 
 composite
 - Arrange pages into tiles and layers
@@ -109,6 +116,7 @@ composite
 composite properties
 - opacity
 - transform
+
 ###### 13:00
 avoid repaint for fixed
 ```
@@ -122,6 +130,7 @@ summary
 
 
 ### Critical Loading
+###### 01:22
 render blocking resources:
 - link rel
 - script src
